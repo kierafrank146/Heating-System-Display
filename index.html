@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Realtime Dashboard</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <header class="header">
+            <h1>Latest Sensor Readings</h1>
+            <div class="meta">
+                <span id="status">Idle</span>
+                <span id="lastUpdated"></span>
+            </div>
+        </header>
+
+        <main class="container">
+
+            <section class="card">
+                <h2>INPUT_TANKi Today</h2>
+                <canvas id="inputLineChart"></canvas>
+            </section>
+        
+            <section class="card">
+                <div class="controls">
+                <label>
+                    Sensor filter
+                    <select id="sensorFilter">
+                    <option value="">All</option>
+                    </select>
+                </label>
+
+                <label>
+                    Rows
+                    <select id="rowLimit">
+                    <option value="25">25</option>
+                    <option value="50" selected>50</option>
+                    <option value="1000">1000</option>
+                    </select>
+                </label>
+
+                <button id="reload">Reload</button>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                        <th>Time (UTC)</th>
+                        <th>Sensor</th>
+                        <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rows"></tbody>
+                </table>
+        </section>
+        </main>
+
+        <!--Load chart.js and a time adapter (Luxon)-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/chart.umd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@latest/build/global/luxon.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@latest/dist/chartjs-adapter-luxon.umd.min.js"></script>
+
+        <script type="module" src="app.js"></script>
+
+    </body>
+</html>
