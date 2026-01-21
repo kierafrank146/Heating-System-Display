@@ -236,7 +236,7 @@ def main():
                 c.executemany("INSERT INTO data (time, sensor_type, value) VALUES (?,?,?)", one_row_data)
                 conn.commit()
                                 
-                c.execute("SELECT id, time, sensor_type, value, uploaded FROM data ORDER BY id")
+                c.execute("SELECT id, time, sensor_type, value, uploaded FROM data WHERE uploaded = 0 ORDER BY id")
                 data_table = c.fetchall()
                 for data in data_table:
                     print(data)
