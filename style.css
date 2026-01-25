@@ -85,3 +85,69 @@ thead th {
   font-size: 12px;
   opacity: 0.85;
 }
+
+/* Layout */
+.legend {
+    font-size: 12px;
+    display: 100px;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Section container */
+.legend-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Grid row for label and color boxes */
+.legend-row {
+    display: grid;
+    grid-template-columns: 260px auto;
+    align-items: center;
+}
+
+/* Color boxes next to each other */
+.legend-values {
+    display: flex; /* Flexbox to align color boxes next to each other */
+    gap: 12px; /* Space between color boxes */
+    align-items: center; /* Align color boxes vertically */
+}
+
+/* Color box */
+.legend-box {
+    width: 20px; /* Fixed width for consistency */
+    height: 20px; /* Fixed height for consistency */
+    border: 1px solid #000;
+    margin: 0; /* Remove any margins */
+}
+
+/* Colors */
+.blue {
+    background-color: #1f4ed8;
+}
+
+.green {
+    background-color: #22c55e;
+    margin-left: 12px; /* Push green boxes to the right */
+}
+
+.red {
+    background-color: #ef4444;
+}
+
+.legend-pair {
+    display: flex;
+    align-items: center;
+}
+
+.legend-table .blue,
+.legend-table .green {
+    display: flex;  /* Ensure both blue and green boxes are flex items */
+    align-items: center; /* Center them vertically within their container */
+}
+
+
+
+

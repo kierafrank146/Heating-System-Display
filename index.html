@@ -20,10 +20,38 @@
         <main class="container">
 
             <section class="card">
-                <h2>Sensor Readings Today</h2>
-                <button id="reload">Reload</button>
+                <h2>Sensor Readings Today
+                    <button id="reload" style="margin-left: 20px;">Reload</button>
+                </h2>
 
                 <canvas id="inputLineChart"></canvas>
+                <div class="legend">
+
+                    <div class="legend-section">
+                        <div class="legend-row">
+                            <span>System States</span>
+                            <div class="legend-values">
+                                <div class="legend-pair"><div class="legend-box blue"></div>Low</div>
+                                <div class="legend-pair"><div class="legend-box green"></div>High</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="legend-section">
+                        <div class="legend-row">
+                            <span>Alarm Flags</span>
+                            <div class="legend-values">
+                                <div class="legend-pair"><div class="legend-box blue"></div>n/a</div>
+                                <div class="legend-pair"><div class="legend-box green"></div>Warning</div>
+                                <div class="legend-pair"><div class="legend-box red"></div>Critical</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
                 <canvas id="stateTimelineChart"></canvas>
             </section>
     

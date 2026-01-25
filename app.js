@@ -389,6 +389,12 @@ async function boot() {
     await loadInitialData();
     await loadChartDataToday();  // backfill chart FIRST
     await loadStateTimelineToday();
+
+    setInterval(async () => {
+        await loadInitialData();
+        await loadChartDataToday();
+        await loadStateTimelineToday();
+    }, 10000);  
 }
 
 // UI events
@@ -403,6 +409,7 @@ reloadBtn.addEventListener("click", async () => {
     await loadChartDataToday();
     await loadStateTimelineToday();
 });
+
 
 // Start
 boot();
