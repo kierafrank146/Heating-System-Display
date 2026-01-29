@@ -2,7 +2,7 @@
 
 A web-based dashboard designed to remotely visualize operational data from a home heating system. The application presents recent sensor readings in a table and displays the current day’s data in a time-series line chart.
 
-🔗 Live demo: https://YOUR-VERCEL-URL.vercel.app
+🔗 Live demo: https://heating-system-display.vercel.app/
 
 ## Project Overview
 
